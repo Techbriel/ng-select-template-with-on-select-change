@@ -44,8 +44,24 @@
 
 <p>{{ selectedUsers }}</p>
 
-<select *ngIf="virtueSelected">
-  <option value="Benz">Benze</option>
-  <option value="BMW">BMW</option>
-  this is only shown if "anjm" is selected on the first drop down
-</select>
+
+
+
+<ng-select  *ngIf="virtueSelected"
+[multiple]="false"
+[items]="Marques | slice:0:2"
+bindLabel="nom"
+formControlName="idMarque">
+</ng-select> <!-------- this dropdown displays if car is selected    -->
+
+
+
+
+<ng-select  *ngIf="motocycleSelected"
+[multiple]="false"
+[items]="Marques | slice:3:4"
+bindLabel="nom"
+formControlName="idMarque">
+</ng-select> <!-------- this dropdown displays if Motocycle is selected    -->
+
+

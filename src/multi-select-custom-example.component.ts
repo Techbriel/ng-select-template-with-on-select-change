@@ -12,6 +12,7 @@ export class MultiSelectCustomExampleComponent implements OnInit {
     githubUsers$: Observable<any[]>;
     selectedUsers = [];
     virtueSelected: boolean = false
+    motocycleSelected: boolean = false
 
     constructor(private dataService: DataService) {
     }
@@ -27,6 +28,10 @@ export class MultiSelectCustomExampleComponent implements OnInit {
         if(eventData == 'anjm'){
             this.virtueSelected == true
             console.log('virtueSelected is true now')
+        }
+        else{
+            this.motocycleSelected == true;
+            console.log('motorcycle was selected')
         }
       console.log("CHANGE EVENT DATA:", eventData);
       console.log(this.selectedUsers, 'new user selected')
